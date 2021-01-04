@@ -1,0 +1,76 @@
+/*
+    BANNER
+*/
+#banner{background-image: url("etranger_banner.jpg");}
+
+/*
+    MAIN
+*/
+#univ > a > li, #stages > a > li{
+    border: 2px solid black;
+    border-radius: 30px;
+    list-style: none;
+    box-shadow: inset 0 0 0 1000px rgba(255,255,255,0.7); /*Fond blanc sur les images*/
+    background-size: cover;
+    padding: 10px 30px;
+    height: 34.26%; /*370px*/
+    font-size: 20px;
+    color: black;
+    transition: 0.75s ease-in-out;
+}
+
+#univ a ul, #stages a ul{list-style-type: disc;}
+
+#univ a,#stages a{text-decoration: none;}
+
+/*Images de fond + positionnement*/
+#univ > a:nth-of-type(1) > li{background-image: url(univ/1uqac.jpg);background-position: 50% 0.926%;/*-10px*/}
+#univ > a:nth-of-type(2) > li{background-image: url(univ/2bci.jpg);}
+#univ > a:nth-of-type(3) > li{background-image: url(univ/3sligo.jpg);background-position: 50% 9.26%;/*-100px*/}
+#univ > a:nth-of-type(4) > li{background-image: url(univ/4dundalk.jpg);background-position: 50% 23.15%;/*-250px*/}
+#univ > a:nth-of-type(5) > li{background-image: url(univ/5pablo.jpg);}
+
+#stages > a:nth-of-type(1) > li{background-image: url(univ/6thessaly.jpg);}
+#stages > a:nth-of-type(2) > li{background-image: url(univ/7varsovie.jpg);}
+#stages > a:nth-of-type(3) > li{background-image: url(univ/8timisoara.jpg);}
+#stages > a:nth-of-type(4) > li{background-image: url(univ/9cegep.jpg);background-position: 50% 13.89%;/*-150px*/}
+#stages > a:nth-of-type(5) > li{background-image: url(univ/10tohoku.jpg);background-position: 50% 13.89%;/*-150px*/}
+
+#univ > a > li:hover, #stages > a > li:hover{
+   box-shadow: inset 0 0 0 1000px rgba(64,64,64,0.7);
+   transition: 0.75s ease-in-out;
+}
+
+.univ-content{
+    visibility: visible;
+    animation: fadein 0.2s;
+}
+
+a:hover > li:hover .univ-content{
+    animation: fadeout 0.75s;
+    visibility: hidden;
+}
+
+.linktosite{
+    color: white;
+    width: 66%;
+    margin: 50px auto;
+    vertical-align: middle;
+    font-size: 30px;
+    text-decoration: underline;
+    animation: fadeout 0.2s;
+    visibility: hidden;
+    line-height: 40px;
+}
+
+a > li:hover .linktosite{
+    visibility: visible;
+    animation: fadein 0.2s;
+}
+
+@keyframes fadein{
+    from{opacity: 0;visibility: hidden;}
+    to{opacity: 1;visibility: visible;}}
+@keyframes fadeout{
+    from{opacity: 1;visibility: visible;}
+    to{opacity: 0;visibility: hidden;}}

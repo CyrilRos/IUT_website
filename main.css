@@ -1,0 +1,269 @@
+@font-face{
+    font-family: "helvetica";
+    src: url("fonts/helvetica-webfont.woff") format("woff");}
+@font-face{
+    font-family: "TwCenMTBold";
+    src: url("fonts/TCB_____.woff") format("woff");}
+
+body{background-color: #D5D5D5; font-family: "helvetica"; line-height: 22px;}
+h1,h2,h3{font-family: "TwCenMTBold";}
+h1{
+    text-shadow: 3px 2px 4px rgba(0,0,0,0.8);
+    font-size: 40px;
+    line-height: 30px;
+}
+
+h2{
+    color: rgb(191,10,153); /*Couleur international -25%*/
+    font-size: 27px;
+}
+
+h3{
+    font-size: 24px;
+    text-decoration-line: underline;
+    text-decoration-style: double;
+    text-decoration-thickness: 1px;
+}
+
+/*Phone*/
+@media only screen and (max-width: 1500px){
+    #main{width: 75%;}
+    aside{width: 24%;}
+}
+
+/*Computer*/
+@media only screen and (min-width: 1500px){
+    #main{width: 75%;margin: auto;}
+    aside{width: 12%;}
+}
+
+/*
+    HEADER
+*/
+header{
+    background-color: rgb(2,36,70);
+    height: 50px;
+    width: 100%;
+    /*testé sur une réso de 1920*1080px :
+    (tous mis en %)
+    margin-left de -10px 
+    margin-top de -8 px
+    padding-right de 18px*/
+    margin-left: -0.521%;
+    margin-top: -0.417%;
+    padding-right: 0.938%;
+}
+
+header img{
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+    margin-left: 5px;
+    /*margin-left de 10px avec padding-right du prochain sélécteur*/
+}
+
+header a img:not(:last-child), header ul a:not(:last-child){
+    border-right: 2px solid white;
+    padding-right: 10px;
+}
+
+header ul{float: right;}
+
+header ul li{
+    display: inline-block;
+    color: white;
+}
+
+/*
+    NAVIGATION
+*/
+#menu ul{
+    padding: 0;
+    /*list-style-type: none;*/
+}
+
+#menu{
+    text-align: center;
+    margin: 10px;
+}
+
+#menu li{
+    display: inline-block;
+    font-weight: bold;
+}
+
+#menu ul li{
+    display: inherit;
+    padding-bottom: 5px;
+}
+
+#menu ul{
+    position: absolute;
+    left: -100%;
+    background-color: white;
+    width: 17.7%;
+}
+
+#menu li:hover ul{
+    left: auto;
+    z-index: 999;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+    font-weight: normal;
+}
+/*Couleur des menus*/
+#menu > li:nth-child(1){background-color: #00AF9E;}
+#menu li:nth-child(1) ul li:hover{color: #00AF9E;background-color: rgba(0,172,154,0.4);}
+#menu li:nth-child(1) ul{
+    border: solid #00AF9E;
+    border-width: 0px 5px 5px;
+}
+
+#menu > li:nth-child(2){background-color: #E71D73;}
+#menu li:nth-child(2) ul li:hover{color: #E71D73;background-color: rgba(255,13,204,0.4);}
+#menu li:nth-child(2) ul{
+    border: solid #E71D73;
+    border-width: 0px 5px 5px;
+}
+
+#menu > li:nth-child(3){background-color: #EB8915;}
+#menu li:nth-child(3) ul li:hover{color: #EB8915;background-color: rgba(245,143,10,0.4);}
+#menu li:nth-child(3) ul{
+    border: solid #EB8915;
+    border-width: 0px 5px 5px;
+}
+
+#menu > li:nth-child(4){background-color: #A24392;}
+#menu li:nth-child(4) ul li:hover{color: #A24392;background-color: rgba(162,67,146,0.4);}
+#menu li:nth-child(4) ul{
+    border: solid #A24392;
+    border-width: 0px 5px 5px;
+}
+
+#menu > li:nth-child(5){background-color: #044883;}
+#menu li:nth-child(5) ul li:hover{color: #044883;background-color: rgba(4,72,130,0.4);}
+#menu li:nth-child(5) ul{
+    border: solid #044883;
+    border-width: 0px 5px 5px;
+}
+
+
+#menu > li{
+    width: 19%;
+    margin: auto;
+    color: white;
+    padding: 5px 0px;
+}
+
+aside{
+    float: right;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 20px;
+    /*width:12%; /*230px*/
+}
+
+/*
+    BANNER
+*/
+#banner{
+    height: 500px;
+    width: 100.9%;
+    border: solid black;
+    border-width: 3px 0px;
+    margin-left: -0.521%;
+    background-size: cover;
+    position: relative;
+}
+
+#title{
+    width: 499px;
+    position: relative;
+    top: 70%;
+    left: 2.604%; /*50px*/
+    background-color: rgba(255,255,255,0.7);
+    padding: 20px 5px 20px 30px;
+}
+
+#iutlogo{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+/*
+    FOOTER
+*/
+footer{
+    background-color: rgb(2,36,70);
+    width: 100%;
+    padding-top: 5px;
+    /*c.f. ligne 15 à 19 pour les trois valeurs suivantes*/
+    margin-left: -0.521%;
+    margin-bottom: -0.43%;
+    padding-right: 0.938%;
+    position: static;
+    bottom: 0px;
+}
+
+#artoislogo{
+    height: 108px;
+    width: 207px;
+    position: absolute;
+    right: 5px;
+    background-color: rgba(255,255,255,0.35);
+    padding: 2px;
+}
+
+#submenu > li{
+    display: inline-block;
+    width: 19%;
+    vertical-align: top;
+    color: white;
+    font-weight: bold;
+}
+#submenu > li::before{content: "■ ";}
+#submenu > li:nth-child(1)::before{color: #00AF9E;}
+#submenu > li:nth-child(2)::before{color: #E71D73;}
+#submenu > li:nth-child(3)::before{color: #EB8915;}
+#submenu > li:nth-child(4)::before{color: #A24392;}
+#submenu > li:nth-child(5)::before{color: #044883;}
+
+#submenu a, span{
+    color: white;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+/*Small screen*/
+@media only screen and (max-width: 1400px){
+    #submenu{margin-top: 100px;}
+}
+/*Medium screen*/
+@media only screen and (min-width: 1401px) and (max-width: 1799px){
+    #submenu{margin-top: 50px;}
+}
+/*Large screen*/
+@media only screen and (min-width: 1800px){
+    #submenu{margin-top: 0px;}
+}
+
+#submenu2{
+    list-style: none;
+}
+
+#submenu2 li{
+    display: inline;
+    margin-right: 40px;
+}
+
+#submenu2 a{
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+footer span{margin-left: 50px;}
